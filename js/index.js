@@ -4,15 +4,14 @@ document.getElementById("first-button").addEventListener("click", function () {
 
     if (isNaN(buttonNoakhali) || buttonNoakhali < 0) {
         alert("Invalid Input");
-        // console.log(buttonNoakhali);
     } else {
         
         const noakhaliText = getInnerTextToNumber("noakhali-text-field");
         const totalBalanceOfNoakhali = buttonNoakhali + noakhaliText;
-        document.getElementById("noakhali-text-field").innerText =
-        totalBalanceOfNoakhali;
+        
         const mainBalance = getInnerTextToNumber("main-balance");
-    const afterDonatedAmount = mainBalance - totalBalanceOfNoakhali;
+    const afterDonatedAmount = mainBalance - buttonNoakhali;
+    // console.log(afterDonatedAmount);
     
     // find main balance < 0 (false)
     const negativeAccountBalance = mainBalance - buttonNoakhali;
@@ -21,7 +20,13 @@ document.getElementById("first-button").addEventListener("click", function () {
         return;
     }else{
         document.getElementById("main-balance").innerText = afterDonatedAmount;
+        document.getElementById("noakhali-text-field").innerText =
+        totalBalanceOfNoakhali;
     }
+    // document.getElementById('modal-section').classList.remove('hidden')
+    //     document.getElementById('modal-section').addEventListener('click', function (){
+    //         document.getElementById('modal-section').classList.add('hidden')
+    //     })
     // added with title
     const title = document.getElementById("donate-noakhali").innerText;
     // console.log(title);
@@ -54,14 +59,17 @@ document.getElementById("second-btn").addEventListener("click", function () {
         document.getElementById("feni-text").innerText = totalBalanceOfFeni;
     
         const mainBalance = getInnerTextToNumber("main-balance");
-        const afterDonatedAmount = mainBalance - totalBalanceOfFeni;
+        const afterDonatedAmount = mainBalance - buttonFeni;
         console.log(afterDonatedAmount);
         if (afterDonatedAmount < 0) {
             alert("Balance is not available for donate")
         } else {
             document.getElementById("main-balance").innerText = afterDonatedAmount;
         }
-    
+        // document.getElementById('modal-section').classList.remove('hidden')
+        // document.getElementById('modal-section').addEventListener('click', function (){
+        //     document.getElementById('modal-section').classList.add('hidden')
+        // })
         // title added on append child
     
         const titleTwo = document.getElementById("title-feni").innerText;
@@ -78,6 +86,7 @@ document.getElementById("second-btn").addEventListener("click", function () {
             </div>
         `;
         contentHistory.append(newElement);
+
     }
 });
 
@@ -85,20 +94,27 @@ document.getElementById("second-btn").addEventListener("click", function () {
 
 document.getElementById("third-btn").addEventListener("click", function () {
     const buttonQuota = getInputFieldByNumber("donate-quota");
-
     if (isNaN(buttonQuota) || buttonQuota < 0) {
         alert("Invalid Input");
     } else {
-        const mainBalance = getInnerTextToNumber("main-balance");
+    const mainBalance = getInnerTextToNumber("main-balance");
     const quotaText = getInnerTextToNumber("quata-text");
     const totalBalanceOfquata = buttonQuota + quotaText;
     document.getElementById("quata-text").innerText = totalBalanceOfquata;
-    const afterDonatedAmount = mainBalance - totalBalanceOfquata;
+    const afterDonatedAmount = mainBalance - buttonQuota;
+    console.log(afterDonatedAmount);
+    // modal
+    // document.getElementById('modal-section').classList.remove('hidden')
     if(afterDonatedAmount < 0){
-        alert('Balance is not available for donate')
+        alert('Balance is not available for donate');
+        return;
     }else{
         document.getElementById("main-balance").innerText = afterDonatedAmount;
     }
+    // document.getElementById('modal-section').classList.remove('hidden')
+    //     document.getElementById('modal-section').addEventListener('click', function (){
+    //         document.getElementById('my_modal_1').classList.add('hidden')
+    //     })
     // append title added on
     const titleThree = document.getElementById("title-quota").innerText;
 

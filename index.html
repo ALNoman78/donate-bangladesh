@@ -27,7 +27,7 @@
 </head>
 
 <body class="font-lexend">
-    <header>
+    <header class="fixed w-full  backdrop-brightness-50 bg-white/70">
         <!-- navigation bar start -->
         <nav class="bg-[#F9F7F3]">
             <div class="navbar md:w-10/12 w-full mx-auto leading-7 md:leading-[110px]">
@@ -45,7 +45,8 @@
                 <div class="navbar-end">
                     <div class="inline-flex md:gap-4 gap-2 items-center">
                         <img class="" src="./assets/coin.png" alt="">
-                        <div id="main-balance" class="stat-value md:text-xl text-xs text-[rgba(17,17,17,0.7)]">5500</div>
+                        <div id="main-balance" class="stat-value md:text-xl text-xs text-[rgba(17,17,17,0.7)]">5500
+                        </div>
                         <span class="stat-value md:text-xl text-xs text-[rgba(17,17,17,0.71)]">BDT</span>
                     </div>
                 </div>
@@ -54,16 +55,18 @@
         <!-- banner section start -->
         <div id="hide-for-blog" class="flex justify-center gap-5 md:w-10/12 w-full mx-auto items-center md:my-20 my-10">
             <div class="flex gap-5 items-center justify-center">
-                <button id="donation-btn" class="btn bg-[#B4F461] border-none outline-0 px-8 font-bold">Donation</button>
+                <button id="donation-btn"
+                    class="btn bg-[#B4F461] border-none outline-0 px-8 font-bold">Donation</button>
                 <button id="History-btn"
                     class="btn px-8 border border-solid border-[rgba(17,17,17,0.35)] font-bold">History</button>
             </div>
         </div>
 
     </header>
-    <main id="main-hide-for-blog">
+    <main id="main-hide-for-blog" class="md:pt-96 pt-52">
         <div id="main-content" class="main md:w-10/12 mx-auto">
-            <div class="flex md:flex-row flex-col border border-solid border-[rgba(17,17,17,0.15)] p-8 rounded-3xl gap-8 justify-between">
+            <div
+                class="flex md:flex-row flex-col border border-solid border-[rgba(17,17,17,0.15)] p-8 rounded-3xl gap-8 justify-between">
                 <div class="flex-1">
                     <img class="w-full" src="./assets/noakhali.png" alt="">
                 </div>
@@ -75,7 +78,8 @@
                             <span class="stat-value text-xl text-[rgba(17,17,17,0.71)]">BDT</span>
                         </div>
                         <div class="flex flex-col justify-between md:pr-11">
-                            <h3 id="donate-noakhali" class="md:text-3xl text-lg font-bold mt-3">Donate for Flood at Noakhali, Bangladesh</h3>
+                            <h3 id="donate-noakhali" class="md:text-3xl text-lg font-bold mt-3">Donate for Flood at
+                                Noakhali, Bangladesh</h3>
                             <p class="text-wrap leading-8 md:pr-14 py-6"> The recent floods in Noakhali have caused
                                 significant damage to homes infrastructure.
                                 Your donation will help provide essential supplies and to those affected by this
@@ -85,8 +89,22 @@
                             <input id="donate-noakhali-field"
                                 class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text" name=""
                                 placeholder="Write Donation Amount" id="">
-                            <button id="first-button"
-                                class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate Now</button>
+                            <!-- <button id="first-button"
+                                class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate Now</button> -->
+                                    <!-- modal start -->
+                                    <button id="first-button" class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="third-btn" onclick="my_modal_1.showModal()">Donate Now</button>
+                                    <dialog id="my_modal_1" class="modal">
+                                        <div class="modal-box flex flex-col justify-center items-center gap-4">
+                                            <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
+                                            <img src="./assets/coin.png" alt="">
+                                            <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
+                                            <p class="font-bold text-xl">Successful</p>
+                                            <form method="dialog">
+                                                <button class="btn">Close Confirmation</button>
+                                            </form>
+                                        </div>
+                                    </dialog>
+                                    <!-- modal end -->
                         </div>
                     </div>
                 </div>
@@ -98,14 +116,17 @@
                 </div>
                 <div class=" flex-1">
                     <div class="flex flex-col justify-between">
-                        <div class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4 items-center">
+                        <div
+                            class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4 items-center">
                             <img class="w-full" src="./assets/coin.png" alt="">
-                            <div id="feni-text" class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">600</div>
+                            <div id="feni-text" class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">600
+                            </div>
                             <span class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
                         </div>
                         <div class="flex flex-col md:pr-11">
                             <div>
-                                <h3 id="title-feni" class="md:text-3xl text-lg font-bold mt-3">Donate for Flood Relief in Feni,Bangladesh</h3>
+                                <h3 id="title-feni" class="md:text-3xl text-lg font-bold mt-3">Donate for Flood Relief
+                                    in Feni,Bangladesh</h3>
                                 <p class="text-wrap leading-8  py-6"> The recent floods in Feni have devastated local
                                     communities, leading to severe disruption and loss. Your generous donation will help
                                     provide immediate aid, including food, clean water, and medical supplies, to those
@@ -117,28 +138,46 @@
                                 <input id="donate-flood-refil"
                                     class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text"
                                     name="" placeholder="Write Donation Amount" id="">
-                                <button id="second-btn"
+                                <!-- <button id="second-btn"
                                     class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate
-                                    Now</button>
+                                    Now</button> -->
+                                        <!-- modal start -->
+                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="second-btn" onclick="my_modal_1.showModal()">Donate Now</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <div class="modal-box flex flex-col justify-center items-center gap-4">
+                                        <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
+                                        <img src="./assets/coin.png" alt="">
+                                        <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
+                                        <p class="font-bold text-xl">Successful</p>
+                                        <form method="dialog">
+                                            <button class="btn">Close Confirmation</button>
+                                        </form>
+                                    </div>
+                                </dialog>
+                                <!-- modal end -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex md:flex-row flex-col border border-solid border-[rgba(17,17,17,0.15)] p-8 rounded-3xl gap-8 justify-between">
+            <div
+                class="flex md:flex-row flex-col border border-solid border-[rgba(17,17,17,0.15)] p-8 rounded-3xl gap-8 justify-between">
                 <div class="flex-1">
                     <img class="w-full" src="./assets/quota-protest.png" alt="">
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-col justify-between">
-                        <div class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4 items-center">
+                        <div
+                            class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4 items-center">
                             <img src="./assets/coin.png" alt="">
-                            <div id="quata-text" class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">400</div>
+                            <div id="quata-text" class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">400
+                            </div>
                             <span class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
                         </div>
                         <div class="flex flex-col justify-between md:pr-11">
                             <div>
-                                <h3 id="title-quota" class="md:text-3xl text-lg font-bold mt-3">Aid for Injured in the Quota Movement</h3>
+                                <h3 id="title-quota" class="md:text-3xl text-lg font-bold mt-3">Aid for Injured in the
+                                    Quota Movement</h3>
                                 <p class="text-wrap leading-8  py-6"> The recent floods in Feni have devastated local
                                     communities, leading to severe disruption and loss. Your generous donation will help
                                     provide immediate aid, including food, clean water, and medical supplies, to those
@@ -150,9 +189,23 @@
                                 <input id="donate-quota"
                                     class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text"
                                     name="" placeholder="Write Donation Amount" id="">
-                                <button id="third-btn"
+                                <!-- <button id="third-btn"
                                     class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate
-                                    Now</button>
+                                    Now</button> -->
+                                    <!-- modal start -->
+                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="third-btn" onclick="my_modal_1.showModal()">Donate Now</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <div class="modal-box flex flex-col justify-center items-center gap-4">
+                                        <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
+                                        <img src="./assets/coin.png" alt="">
+                                        <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
+                                        <p class="font-bold text-xl">Successful</p>
+                                        <form method="dialog">
+                                            <button class="btn">Close Confirmation</button>
+                                        </form>
+                                    </div>
+                                </dialog>
+                                <!-- modal end -->
                             </div>
                         </div>
                     </div>
@@ -165,11 +218,21 @@
         </div>
     </main>
     <footer>
+        <!-- Open the modal using ID.showModal() method -->
 
+        <!-- <div id="modal-section" class="hidden">
+            <div
+                class=" md:w-[30%] bg-white border border-gray-400 rounded-2xl  p-4 flex flex-col justify-center items-center md:gap-5 absolute translate-x-1/2 translate-y-1/2 top top-1/2 right-1/2">
+                <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
+                <img src="./assets/coin.png" alt="">
+                <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
+                <p class="font-bold text-xl">Successful</p>
+                <button id="close-info" class="btn"> Close Confirmation</button>
+            </div>
+        </div> -->
     </footer>
     <script src="./js/utilites.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/faq.js"></script>
 </body>
 
 </html>
