@@ -12,8 +12,8 @@ document.getElementById("first-button").addEventListener("click", function () {
     // find main balance < 0 (false)
     const negativeAccountBalance = mainBalance - buttonNoakhali;
     if(negativeAccountBalance < 0){
-        document.getElementById('my_modal_1').classList.add('hidden')
         alert ('Balance is not available for donate');
+        // document.getElementById('my_modal_1').showModal()
         return;
     }else{
         document.getElementById("main-balance").innerText = afterDonatedAmount;
@@ -49,7 +49,7 @@ document.getElementById("second-btn").addEventListener("click", function () {
         const afterDonatedAmount = mainBalance - buttonFeni;
         console.log(afterDonatedAmount);
         if (afterDonatedAmount < 0) {
-            document.getElementById('my_modal_3').classList.add('hidden')
+            // document.getElementById('my_modal_3').shu
             alert("Balance is not available for donate")
         } else {
             document.getElementById("main-balance").innerText = afterDonatedAmount;
@@ -86,7 +86,7 @@ document.getElementById("third-btn").addEventListener("click", function () {
     document.getElementById("quata-text").innerText = totalBalanceOfquata;
     const afterDonatedAmount = mainBalance - buttonQuota;
     if(afterDonatedAmount < 0){
-        document.getElementById('my_modal_4').classList.add('hidden')
+        // document.getElementById('my_modal_4').classList.add('hidden')
         alert('Balance is not available for donate');
         return;
     }else{
