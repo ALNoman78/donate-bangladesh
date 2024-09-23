@@ -2,8 +2,9 @@ document.getElementById("first-button").addEventListener("click", function () {
     const buttonNoakhali = getInputFieldByNumber("donate-noakhali-field");
     //  || buttonNoakhali > 0   ||buttonNoakhali === ""|| !isNaN(buttonNoakhali)
 
-    if (typeof buttonNoakhali !== 'number' || buttonNoakhali < 0 ) {
+    if (isNaN(buttonNoakhali) || buttonNoakhali < 0) {
         alert("Invalid Input");
+        // console.log(buttonNoakhali);
     } else {
         
         const noakhaliText = getInnerTextToNumber("noakhali-text-field");
@@ -12,10 +13,18 @@ document.getElementById("first-button").addEventListener("click", function () {
         totalBalanceOfNoakhali;
         const mainBalance = getInnerTextToNumber("main-balance");
     const afterDonatedAmount = mainBalance - totalBalanceOfNoakhali;
-    document.getElementById("main-balance").innerText = afterDonatedAmount;
+    
+    // find main balance < 0 (false)
+    const negativeAccountBalance = mainBalance - buttonNoakhali;
+    if(negativeAccountBalance < 0){
+        alert ('Balance is not available for donate');
+        return;
+    }else{
+        document.getElementById("main-balance").innerText = afterDonatedAmount;
+    }
     // added with title
     const title = document.getElementById("donate-noakhali").innerText;
-    console.log(title);
+    // console.log(title);
     // create new element
     const contentHistory = document.getElementById("history-content");
     const newElement = document.createElement("div");
@@ -37,33 +46,38 @@ document.getElementById("second-btn").addEventListener("click", function () {
 
     // authorized value || buttonFeni < 0
 
-    if (buttonFeni === "" || !isNaN(buttonFeni )) {
-        const feniText = getInnerTextToNumber("feni-text");
-    const totalBalanceOfFeni = buttonFeni + feniText;
-    document.getElementById("feni-text").innerText = totalBalanceOfFeni;
-
-    const mainBalance = getInnerTextToNumber("main-balance");
-    const afterDonatedAmount = mainBalance - totalBalanceOfFeni;
-    document.getElementById("main-balance").innerText = afterDonatedAmount;
-
-    // title added on append child
-
-    const titleTwo = document.getElementById("title-feni").innerText;
-
-    // append element
-
-    const contentHistory = document.getElementById("history-content");
-    const newElement = document.createElement("div");
-    newElement.innerHTML = `
-        <div class = "md:w-10/12 mx-auto border border-solid border-[rgba(17,17,17,0.35)] rounded-lg p-6 my-6">
-            <p>${buttonFeni} Tk. is ${titleTwo}</p>
-            <p>Date ${new Date()}</p>
-            <p></p>
-        </div>
-    `;
-    contentHistory.append(newElement);
-    } else {
+    if (isNaN(buttonFeni) || buttonFeni < 0) {
         alert("Invalid Input");
+    } else {
+        const feniText = getInnerTextToNumber("feni-text");
+        const totalBalanceOfFeni = buttonFeni + feniText;
+        document.getElementById("feni-text").innerText = totalBalanceOfFeni;
+    
+        const mainBalance = getInnerTextToNumber("main-balance");
+        const afterDonatedAmount = mainBalance - totalBalanceOfFeni;
+        console.log(afterDonatedAmount);
+        if (afterDonatedAmount < 0) {
+            alert("Balance is not available for donate")
+        } else {
+            document.getElementById("main-balance").innerText = afterDonatedAmount;
+        }
+    
+        // title added on append child
+    
+        const titleTwo = document.getElementById("title-feni").innerText;
+    
+        // append element
+    
+        const contentHistory = document.getElementById("history-content");
+        const newElement = document.createElement("div");
+        newElement.innerHTML = `
+            <div class = "md:w-10/12 mx-auto border border-solid border-[rgba(17,17,17,0.35)] rounded-lg p-6 my-6">
+                <p>${buttonFeni} Tk. is ${titleTwo}</p>
+                <p>Date ${new Date()}</p>
+                <p></p>
+            </div>
+        `;
+        contentHistory.append(newElement);
     }
 });
 
@@ -72,15 +86,19 @@ document.getElementById("second-btn").addEventListener("click", function () {
 document.getElementById("third-btn").addEventListener("click", function () {
     const buttonQuota = getInputFieldByNumber("donate-quota");
 
-    if (buttonQuota === "" || !isNaN(buttonQuota)) {
-    const mainBalance = getInnerTextToNumber("main-balance");
-
-    console.log("noman");
+    if (isNaN(buttonQuota) || buttonQuota < 0) {
+        alert("Invalid Input");
+    } else {
+        const mainBalance = getInnerTextToNumber("main-balance");
     const quotaText = getInnerTextToNumber("quata-text");
     const totalBalanceOfquata = buttonQuota + quotaText;
     document.getElementById("quata-text").innerText = totalBalanceOfquata;
     const afterDonatedAmount = mainBalance - totalBalanceOfquata;
-    document.getElementById("main-balance").innerText = afterDonatedAmount;
+    if(afterDonatedAmount < 0){
+        alert('Balance is not available for donate')
+    }else{
+        document.getElementById("main-balance").innerText = afterDonatedAmount;
+    }
     // append title added on
     const titleThree = document.getElementById("title-quota").innerText;
 
@@ -96,8 +114,6 @@ document.getElementById("third-btn").addEventListener("click", function () {
         </div>
     `;
     contentHistory.append(newElement);
-    } else {
-        alert("Invalid Input");
     }
 });
 
