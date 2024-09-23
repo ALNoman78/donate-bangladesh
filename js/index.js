@@ -78,7 +78,6 @@ document.getElementById("second-btn").addEventListener("click", function () {
 document.getElementById("third-btn").addEventListener("click", function () {
     const buttonQuota = getInputFieldByNumber("donate-quota");
     if (isNaN(buttonQuota) || buttonQuota < 0) {
-        document.getElementById('my_modal_4').classList.add('hidden')
         alert("Invalid Input");
     } else {
     const mainBalance = getInnerTextToNumber("main-balance");
