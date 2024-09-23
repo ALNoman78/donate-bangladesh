@@ -91,20 +91,21 @@
                                 placeholder="Write Donation Amount" id="">
                             <!-- <button id="first-button"
                                 class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate Now</button> -->
-                                    <!-- modal start -->
-                                    <button id="first-button" class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="third-btn" onclick="my_modal_1.showModal()">Donate Now</button>
-                                    <dialog id="my_modal_1" class="modal">
-                                        <div class="modal-box flex flex-col justify-center items-center gap-4">
-                                            <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
-                                            <img src="./assets/coin.png" alt="">
-                                            <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
-                                            <p class="font-bold text-xl">Successful</p>
-                                            <form method="dialog">
-                                                <button class="btn">Close Confirmation</button>
-                                            </form>
-                                        </div>
-                                    </dialog>
-                                    <!-- modal end -->
+                            <!-- modal start -->
+                            <button id="first-button" class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]"
+                                onclick="my_modal_1.showModal()">Donate Now </button>
+                            <dialog id="my_modal_1" class="modal">
+                                <div class="modal-box flex flex-col justify-center items-center gap-4">
+                                    <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
+                                    <img src="./assets/coin.png" alt="">
+                                    <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
+                                    <p class="font-bold text-xl">Successful</p>
+                                    <form method="dialog">
+                                        <button class="btn">Close Confirmation</button>
+                                    </form>
+                                </div>
+                            </dialog>
+                            <!-- modal end -->
                         </div>
                     </div>
                 </div>
@@ -138,12 +139,11 @@
                                 <input id="donate-flood-refil"
                                     class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text"
                                     name="" placeholder="Write Donation Amount" id="">
-                                <!-- <button id="second-btn"
-                                    class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate
-                                    Now</button> -->
-                                        <!-- modal start -->
-                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="second-btn" onclick="my_modal_1.showModal()">Donate Now</button>
-                                <dialog id="my_modal_1" class="modal">
+                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="second-btn"
+                                    onclick="my_modal_3.showModal()">
+                                    Donate Now
+                                </button>
+                                <dialog id="my_modal_3" class="modal">
                                     <div class="modal-box flex flex-col justify-center items-center gap-4">
                                         <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
                                         <img src="./assets/coin.png" alt="">
@@ -192,9 +192,10 @@
                                 <!-- <button id="third-btn"
                                     class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate
                                     Now</button> -->
-                                    <!-- modal start -->
-                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="third-btn" onclick="my_modal_1.showModal()">Donate Now</button>
-                                <dialog id="my_modal_1" class="modal">
+                                <!-- modal start -->
+                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="third-btn"
+                                    onclick="my_modal_4.showModal()">Donate Now</button>
+                                <dialog id="my_modal_4" class="modal">
                                     <div class="modal-box flex flex-col justify-center items-center gap-4">
                                         <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
                                         <img src="./assets/coin.png" alt="">
@@ -214,22 +215,10 @@
         </div>
         <!-- history section -->
         <div id="history-content" class="history-container hidden">
-            <!-- <h2 class="font-bold text-5xl text-center">Hidden</h2> -->
+            <!-- their i will append history section -->
         </div>
     </main>
     <footer>
-        <!-- Open the modal using ID.showModal() method -->
-
-        <!-- <div id="modal-section" class="hidden">
-            <div
-                class=" md:w-[30%] bg-white border border-gray-400 rounded-2xl  p-4 flex flex-col justify-center items-center md:gap-5 absolute translate-x-1/2 translate-y-1/2 top top-1/2 right-1/2">
-                <h3 class="md:text-2xl text-lg font-bold ">Congrats</h3>
-                <img src="./assets/coin.png" alt="">
-                <p class="text-[rgba(17,17,17,0.74)]">You are Donated for Human Kind</p>
-                <p class="font-bold text-xl">Successful</p>
-                <button id="close-info" class="btn"> Close Confirmation</button>
-            </div>
-        </div> -->
     </footer>
     <script src="./js/utilites.js"></script>
     <script src="./js/index.js"></script>

@@ -1,7 +1,5 @@
 document.getElementById("first-button").addEventListener("click", function () {
     const buttonNoakhali = getInputFieldByNumber("donate-noakhali-field");
-    //  || buttonNoakhali > 0   ||buttonNoakhali === ""|| !isNaN(buttonNoakhali)
-
     if (isNaN(buttonNoakhali) || buttonNoakhali < 0) {
         alert("Invalid Input");
     } else {
@@ -11,11 +9,10 @@ document.getElementById("first-button").addEventListener("click", function () {
         
         const mainBalance = getInnerTextToNumber("main-balance");
     const afterDonatedAmount = mainBalance - buttonNoakhali;
-    // console.log(afterDonatedAmount);
-    
     // find main balance < 0 (false)
     const negativeAccountBalance = mainBalance - buttonNoakhali;
     if(negativeAccountBalance < 0){
+        document.getElementById('my_modal_1').classList.add('hidden')
         alert ('Balance is not available for donate');
         return;
     }else{
@@ -23,14 +20,7 @@ document.getElementById("first-button").addEventListener("click", function () {
         document.getElementById("noakhali-text-field").innerText =
         totalBalanceOfNoakhali;
     }
-    // document.getElementById('modal-section').classList.remove('hidden')
-    //     document.getElementById('modal-section').addEventListener('click', function (){
-    //         document.getElementById('modal-section').classList.add('hidden')
-    //     })
-    // added with title
     const title = document.getElementById("donate-noakhali").innerText;
-    // console.log(title);
-    // create new element
     const contentHistory = document.getElementById("history-content");
     const newElement = document.createElement("div");
     newElement.innerHTML = `
@@ -41,15 +31,12 @@ document.getElementById("first-button").addEventListener("click", function () {
         </div>
     `;
     contentHistory.append(newElement);
-        // return buttonNoakhali;
     }
 });
 // feni button
 
 document.getElementById("second-btn").addEventListener("click", function () {
     const buttonFeni = getInputFieldByNumber("donate-flood-refil");
-
-    // authorized value || buttonFeni < 0
 
     if (isNaN(buttonFeni) || buttonFeni < 0) {
         alert("Invalid Input");
@@ -62,15 +49,11 @@ document.getElementById("second-btn").addEventListener("click", function () {
         const afterDonatedAmount = mainBalance - buttonFeni;
         console.log(afterDonatedAmount);
         if (afterDonatedAmount < 0) {
+            document.getElementById('my_modal_3').classList.add('hidden')
             alert("Balance is not available for donate")
         } else {
             document.getElementById("main-balance").innerText = afterDonatedAmount;
         }
-        // document.getElementById('modal-section').classList.remove('hidden')
-        // document.getElementById('modal-section').addEventListener('click', function (){
-        //     document.getElementById('modal-section').classList.add('hidden')
-        // })
-        // title added on append child
     
         const titleTwo = document.getElementById("title-feni").innerText;
     
@@ -95,6 +78,7 @@ document.getElementById("second-btn").addEventListener("click", function () {
 document.getElementById("third-btn").addEventListener("click", function () {
     const buttonQuota = getInputFieldByNumber("donate-quota");
     if (isNaN(buttonQuota) || buttonQuota < 0) {
+        document.getElementById('my_modal_4').classList.add('hidden')
         alert("Invalid Input");
     } else {
     const mainBalance = getInnerTextToNumber("main-balance");
@@ -102,20 +86,13 @@ document.getElementById("third-btn").addEventListener("click", function () {
     const totalBalanceOfquata = buttonQuota + quotaText;
     document.getElementById("quata-text").innerText = totalBalanceOfquata;
     const afterDonatedAmount = mainBalance - buttonQuota;
-    console.log(afterDonatedAmount);
-    // modal
-    // document.getElementById('modal-section').classList.remove('hidden')
     if(afterDonatedAmount < 0){
+        document.getElementById('my_modal_4').classList.add('hidden')
         alert('Balance is not available for donate');
         return;
     }else{
         document.getElementById("main-balance").innerText = afterDonatedAmount;
     }
-    // document.getElementById('modal-section').classList.remove('hidden')
-    //     document.getElementById('modal-section').addEventListener('click', function (){
-    //         document.getElementById('my_modal_1').classList.add('hidden')
-    //     })
-    // append title added on
     const titleThree = document.getElementById("title-quota").innerText;
 
     // append element
