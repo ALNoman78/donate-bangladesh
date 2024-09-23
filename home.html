@@ -30,53 +30,38 @@
     <nav class="bg-[#F9F7F3]">
         <div class="navbar md:w-10/12 w-full mx-auto leading-7 md:leading-[110px]">
             <div class="navbar-start">
-                <div class="dropdown md:hidden">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h7" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Homepage</a></li>
-                        <li><a>Portfolio</a></li>
-                        <li><a>About</a></li>
-                    </ul>
-                </div>
                 <div>
-                    <button id="sec-btn" class="btn px-8 py-3 bg-[#B4F461]">Home</button>
+                    <button id="sec-btn" class="btn md:px-8 md:py-3 bg-[#B4F461]">Home</button>
                 </div>
             </div>
-            <div class="navbar-center">
-                <div class="flex justify-center items-center gap-5 cursor-pointer">
-                    <img src="./assets/logo.png" alt="">
-                    <a class="text-xl">Donate Bangladesh</a>
+            <div class="navbar-center text-xs">
+                <div class="flex items-center md:gap-5 justify-between cursor-pointer">
+                    <img class="" src="./assets/logo.png" alt="">
+                    <a class="md:text-xl text-xs md:flex hidden">Donate Bangladesh</a>
                 </div>
             </div>
             <div class="navbar-end">
-                <div class="inline-flex gap-4">
-                    <img src="./assets/coin.png" alt="">
-                    <div id="main-balance" class="stat-value text-xl text-[rgba(17,17,17,0.7)]">5500</div>
-                    <span class="stat-value text-xl text-[rgba(17,17,17,0.71)]">BDT</span>
+                <div class="inline-flex md:gap-4 gap-2 items-center">
+                    <img class="" src="./assets/coin.png" alt="">
+                    <div id="main-balance" class="stat-value md:text-xl text-xs text-[rgba(17,17,17,0.7)]">5500</div>
+                    <span class="stat-value md:text-xl text-xs text-[rgba(17,17,17,0.71)]">BDT</span>
                 </div>
             </div>
         </div>
     </nav>
     <main class="md:w-10/12 mx-auto w-full ">
-        <h3 class="md:text-5xl text-xl font-extrabold text-left md:my-10 my-4">Important FAQ</h3>
+        <h3 class="md:text-5xl text-xl p-5 font-extrabold text-left md:my-10 my-4">Important FAQ</h3>
         <div class="join join-vertical w-full">
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" checked="checked" />
-                <div class="collapse-title text-2xl font-semibold p-4">What is the DOM model ?</div>
+                <div class="collapse-title md:text-2xl text-lg font-semibold p-4">What is the DOM model ?</div>
                 <div class="collapse-content">
                     <p>The DOM (Document Object Model) is a programming interface for HTML and XML documents. It represents the document structure as a tree of objects, where each node corresponds to elements, attributes, or text. Developers use the DOM to access, modify, and interact with elements in a webpage using languages like JavaScript. The DOM allows dynamic updates to the page's content, structure, and styles. Events like clicks or keypresses can be handled using DOM event listeners. The DOM provides a way to build interactive and responsive web applications</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-2xl font-semibold p-4">How do you select element form DOM ?</div>
+                <div class="collapse-title md:text-2xl text-lg font-semibold p-4">How do you select element form DOM ?</div>
                 <div class="collapse-content">
                     <p>To select elements from the DOM, JavaScript provides several methods. Here are some commonly used ones:
                     </p>
@@ -92,14 +77,14 @@
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-2xl font-semibold p-4">What is event delegation in the context of DOM , and why it's useful ?</div>
+                <div class="collapse-title md:text-2xl text-lg font-semibold p-4">What is event delegation in the context of DOM , and why it's useful ?</div>
                 <div class="collapse-content">
                     <p>Event delegation is a technique in JavaScript where you add a single event listener to a parent element instead of adding individual event listeners to each child element. The event listener on the parent captures events that bubble up from its children due to event propagation, specifically event bubbling. This allows handling events for dynamically added elements as well.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-2xl font-semibold p-4">How do you manipulate an Element's attributes and style using DOM ?</div>
+                <div class="collapse-title md:text-2xl text-lg font-semibold p-4">How do you manipulate an Element's attributes and style using DOM ?</div>
                 <div class="collapse-content">
                     To manipulate an element's attributes and styles using the DOM, you can use JavaScript methods and properties. Here's how:
                     <div class="">
