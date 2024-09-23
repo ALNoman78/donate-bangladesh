@@ -56,7 +56,7 @@
         <div id="hide-for-blog" class="flex justify-center gap-5 md:w-10/12 w-full mx-auto items-center md:my-20 my-10">
             <div class="flex gap-5 items-center justify-center">
                 <button id="donation-btn"
-                    class="btn bg-[#B4F461] border-none outline-0 px-8 font-bold">Donation</button>
+                    class="btn text-xl bg-[#B4F461] border-none outline-0 px-8 font-semibold">Donation</button>
                 <button id="History-btn"
                     class="btn px-8 border border-solid border-[rgba(17,17,17,0.35)] font-bold">History</button>
             </div>
@@ -68,28 +68,23 @@
             <div
                 class="flex md:flex-row flex-col border border-solid border-[rgba(17,17,17,0.15)] p-8 rounded-3xl gap-8 justify-between">
                 <div class="flex-1">
-                    <img class="w-full h-auto md:h-[500px] rounded-lg object-cover" src="./assets/noakhali.png" alt="">
+                    <img class="w-full h-auto md:h-[550px] rounded-lg object-cover" src="./assets/noakhali.png" alt="">
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-col justify-between">
-                        <div class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4">
+                        <div class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-[rgba(17,17,17,0.05)] rounded-md md:w-1/4 w-3/4">
                             <img src="./assets/coin.png" alt="">
-                            <div id="noakhali-text-field" class="stat-value text-xl text-[rgba(17,17,17,0.7)]">0</div>
-                            <span class="stat-value text-xl text-[rgba(17,17,17,0.71)]">BDT</span>
+                            <div id="noakhali-text-field" class="text-xl text-[rgba(17,17,17,0.7)]">0</div>
+                            <span class="text-xl text-[rgba(17,17,17,0.7)]">BDT</span>
                         </div>
                         <div class="flex flex-col justify-between md:pr-11">
                             <h3 id="donate-noakhali" class="md:text-3xl text-lg font-bold mt-3">Donate for Flood at
                                 Noakhali, Bangladesh</h3>
-                            <p class="text-wrap leading-8 md:pr-14 py-6"> The recent floods in Noakhali have caused
-                                significant damage to homes infrastructure.
-                                Your donation will help provide essential supplies and to those affected by this
-                                disaster. Every contribution, big or small, makes difference. Please join us in
-                                supporting the relief efforts and making a positive impact on the lives of those in
-                                need.</p>
+                            <p class="text-wrap leading-8 md:pr-14 py-6">The 2024 flood in Noakhali and its surrounding regions, including Feni and Cumilla, has left millions stranded and severely affected by rising waters. This disaster was primarily caused by continuous heavy rainfall and overflow from rivers coming from India. Over 2 million people in the greater Noakhali region are affected, with widespread waterlogging in areas like Sadar, Senbagh, and Companiganj. Roads, homes, and marketplaces are submerged, cutting off many communities from essential resources like food, clean water, and electricity</p>
                             <input id="donate-noakhali-field"
                                 class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text" name=""
                                 placeholder="Write Donation Amount" id="">
-                            <button id="first-button" class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]"
+                            <button id="first-button" class="btn text-xl leading-none font-semibold w-full btn mt-5 bg-[#B4F461]"
                                 onclick="my_modal_1.showModal()">Donate Now </button>
                             <dialog id="my_modal_1" class="modal">
                                 <div class="modal-box flex flex-col justify-center items-center gap-4">
@@ -115,28 +110,23 @@
                 <div class=" flex-1">
                     <div class="flex flex-col justify-between">
                         <div
-                            class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4 items-center">
+                            class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-[rgba(17,17,17,0.05)] rounded-md md:w-1/4 w-3/4 items-center">
                             <img class="w-full" src="./assets/coin.png" alt="">
-                            <div id="feni-text" class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">600
+                            <div id="feni-text" class="md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">600
                             </div>
-                            <span class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
+                            <span class="md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
                         </div>
                         <div class="flex flex-col md:pr-11">
                             <div>
                                 <h3 id="title-feni" class="md:text-3xl text-lg font-bold mt-3">Donate for Flood Relief
                                     in Feni,Bangladesh</h3>
-                                <p class="text-wrap leading-8  py-6"> The recent floods in Feni have devastated local
-                                    communities, leading to severe disruption and loss. Your generous donation will help
-                                    provide immediate aid, including food, clean water, and medical supplies, to those
-                                    affected by this calamity. Together, we can offer crucial support and help rebuild
-                                    lives in the aftermath of this disaster. Every contribution counts towards making a
-                                    real difference. Please consider donating today to assist those in urgent need.</p>
+                                <p class="text-wrap leading-8  py-6">In response to the severe flooding in Feni, Bangladesh, relief efforts have been launched by various organizations and government agencies. The Bangladesh Air Force has been actively distributing relief materials to remote and flood-affected areas, such as Boriya village in Fulgazi Upazila. These efforts also include providing medical services to those impacted by the flood, ensuring that basic necessities like food and healthcare are available in hard-to-reach locations</p>
                             </div>
                             <div>
                                 <input id="donate-flood-refil"
                                     class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text"
                                     name="" placeholder="Write Donation Amount" id="">
-                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="second-btn"
+                                <button class="btn text-xl leading-none font-semibold w-full  btn mt-5 bg-[#B4F461]" id="second-btn"
                                     onclick="my_modal_3.showModal()">
                                     Donate Now
                                 </button>
@@ -165,32 +155,23 @@
                 <div class="flex-1">
                     <div class="flex flex-col justify-between">
                         <div
-                            class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-gray-300 rounded-md md:w-1/4 w-2/4 items-center">
+                            class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-[rgba(17,17,17,0.05)] rounded-md md:w-1/4 w-3/4 items-center">
                             <img src="./assets/coin.png" alt="">
-                            <div id="quata-text" class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">400
+                            <div id="quata-text" class="md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">400
                             </div>
-                            <span class="stat-value md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
+                            <span class="md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
                         </div>
                         <div class="flex flex-col justify-between md:pr-11">
                             <div>
                                 <h3 id="title-quota" class="md:text-3xl text-lg font-bold mt-3">Aid for Injured in the
                                     Quota Movement</h3>
-                                <p class="text-wrap leading-8  py-6"> The recent floods in Feni have devastated local
-                                    communities, leading to severe disruption and loss. Your generous donation will help
-                                    provide immediate aid, including food, clean water, and medical supplies, to those
-                                    affected by this calamity. Together, we can offer crucial support and help rebuild
-                                    lives in the aftermath of this disaster. Every contribution counts towards making a
-                                    real difference. Please consider donating today to assist those in urgent need.</p>
+                                <p class="text-wrap leading-8  py-6"> The 2024 Quota Movement in Bangladesh saw violent clashes between students and government forces over the reinstatement of job quotas for descendants of freedom fighters. The protests, demanding merit-based recruitment, led to hundreds of deaths and thousands injured. The Supreme Court later reduced the freedom fighter quota from 30% to 5%, increasing merit-based appointments. Despite this, protests continued, with calls for broader reforms and aid for the injured​</p>
                             </div>
                             <div>
                                 <input id="donate-quota"
                                     class="w-full p-4  border border-solid border-gray-300 rounded my-7" type="text"
                                     name="" placeholder="Write Donation Amount" id="">
-                                <!-- <button id="third-btn"
-                                    class="select-button w-full py-4 font-bold btn mt-5 bg-[#B4F461]">Donate
-                                    Now</button> -->
-                                <!-- modal start -->
-                                <button class="btn w-full py-4 font-bold btn mt-5 bg-[#B4F461]" id="third-btn"
+                                <button class="btn font-semibold w-full  leading-none btn mt-5 bg-[#B4F461] text-xl" id="third-btn"
                                     onclick="my_modal_4.showModal()">Donate Now</button>
                                 <dialog id="my_modal_4" class="modal">
                                     <div class="modal-box flex flex-col justify-center items-center gap-4">

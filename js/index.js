@@ -11,9 +11,10 @@ document.getElementById("first-button").addEventListener("click", function () {
     const afterDonatedAmount = mainBalance - buttonNoakhali;
     // find main balance < 0 (false)
     const negativeAccountBalance = mainBalance - buttonNoakhali;
+    document.getElementById('my_modal_1').showModal();
     if(negativeAccountBalance < 0){
         alert ('Balance is not available for donate');
-        // document.getElementById('my_modal_1').showModal()
+        document.getElementById('my_modal_1').close();
         return;
     }else{
         document.getElementById("main-balance").innerText = afterDonatedAmount;
@@ -48,9 +49,11 @@ document.getElementById("second-btn").addEventListener("click", function () {
         const mainBalance = getInnerTextToNumber("main-balance");
         const afterDonatedAmount = mainBalance - buttonFeni;
         console.log(afterDonatedAmount);
+        document.getElementById('my_modal_3').showModal();
         if (afterDonatedAmount < 0) {
-            // document.getElementById('my_modal_3').shu
             alert("Balance is not available for donate")
+            document.getElementById('my_modal_3').close();
+            return;
         } else {
             document.getElementById("main-balance").innerText = afterDonatedAmount;
         }
@@ -69,7 +72,7 @@ document.getElementById("second-btn").addEventListener("click", function () {
             </div>
         `;
         contentHistory.append(newElement);
-
+        
     }
 });
 
@@ -85,9 +88,10 @@ document.getElementById("third-btn").addEventListener("click", function () {
     const totalBalanceOfquata = buttonQuota + quotaText;
     document.getElementById("quata-text").innerText = totalBalanceOfquata;
     const afterDonatedAmount = mainBalance - buttonQuota;
+    document.getElementById('my_modal_4').showModal()
     if(afterDonatedAmount < 0){
-        // document.getElementById('my_modal_4').classList.add('hidden')
         alert('Balance is not available for donate');
+        document.getElementById('my_modal_4').close();
         return;
     }else{
         document.getElementById("main-balance").innerText = afterDonatedAmount;
@@ -122,7 +126,6 @@ document.getElementById("History-btn").addEventListener("click", function () {
     mainContent.classList.add("hidden");
     const donationBtn = document.getElementById("donation-btn");
     donationBtn.classList.remove("bg-[#B4F461]");
-    // create element
     });
     // donation button
     document.getElementById("donation-btn").addEventListener("click", function () {
