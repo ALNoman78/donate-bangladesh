@@ -14,7 +14,7 @@ document.getElementById("first-button").addEventListener("click", function () {
     const negativeAccountBalance = mainBalance - buttonNoakhali;
     document.getElementById('my_modal_1').showModal();
     if(negativeAccountBalance < 0){
-        alert ('Balance is not available for donate');
+        alert ('Insufficient Balance');
         document.getElementById('my_modal_1').close();
         return;
     }else{
@@ -53,7 +53,7 @@ document.getElementById("second-btn").addEventListener("click", function () {
         console.log(afterDonatedAmount);
         document.getElementById('my_modal_3').showModal();
         if (afterDonatedAmount < 0) {
-            alert("Balance is not available for donate")
+            alert("Insufficient Balance")
             document.getElementById('my_modal_3').close();
             return;
         } else {
@@ -93,7 +93,7 @@ document.getElementById("third-btn").addEventListener("click", function () {
     const afterDonatedAmount = mainBalance - buttonQuota;
     document.getElementById('my_modal_4').showModal()
     if(afterDonatedAmount < 0){
-        alert('Balance is not available for donate');
+        alert('Insufficient Balance');
         document.getElementById('my_modal_4').close();
         return;
     }else{
