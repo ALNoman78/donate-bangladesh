@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAQ</title>
     <!-- daisyUi + tailwind css -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d0e17ced7d.js" crossorigin="anonymous"></script>
     <!-- tailwind css configuration -->
     <script>
         tailwind.config = {
@@ -50,7 +52,10 @@
         </div>
     </nav>
     <main class="md:w-10/12 mx-auto w-full ">
-        <h3 class="md:text-5xl text-xl p-5 font-extrabold text-left md:my-10 my-4">Important FAQ</h3>
+        <div class="flex items-center">
+            <h3 class="md:text-5xl text-xl p-5 font-extrabold text-left md:my-10 my-4">Important FAQ</h3>
+        <i class="fa-solid fa-question md:text-5xl text-xl"></i>
+        </div>
         <div class="join join-vertical w-full">
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" checked="checked" />
