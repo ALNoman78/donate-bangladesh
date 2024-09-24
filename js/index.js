@@ -2,6 +2,7 @@ document.getElementById("first-button").addEventListener("click", function () {
     const buttonNoakhali = getInputFieldByNumber("donate-noakhali-field");
     if (isNaN(buttonNoakhali) || buttonNoakhali < 0) {
         alert("Invalid Input");
+        document.getElementById('my_modal_1').close();
     } else {
         
         const noakhaliText = getInnerTextToNumber("noakhali-text-field");
@@ -41,6 +42,7 @@ document.getElementById("second-btn").addEventListener("click", function () {
 
     if (isNaN(buttonFeni) || buttonFeni < 0) {
         alert("Invalid Input");
+        document.getElementById('my_modal_3').close();
     } else {
         const feniText = getInnerTextToNumber("feni-text");
         const totalBalanceOfFeni = buttonFeni + feniText;
@@ -82,6 +84,7 @@ document.getElementById("third-btn").addEventListener("click", function () {
     const buttonQuota = getInputFieldByNumber("donate-quota");
     if (isNaN(buttonQuota) || buttonQuota < 0) {
         alert("Invalid Input");
+        document.getElementById('my_modal_4').close();
     } else {
     const mainBalance = getInnerTextToNumber("main-balance");
     const quotaText = getInnerTextToNumber("quata-text");

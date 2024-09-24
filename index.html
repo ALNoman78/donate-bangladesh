@@ -26,20 +26,20 @@
     </script>
 </head>
 
-<body class="font-lexend">
+<body class="font-lexend min-h-screen flex flex-col justify-between">
     <header class="fixed w-full bg-transparent backdrop-blur-xl bg-white/3">
         <!-- navigation bar start -->
         <nav class="bg-[#F9F7F3] ">
             <div class="navbar md:w-10/12 w-full mx-auto leading-7 md:leading-[110px]">
                 <div class="navbar-start">
                     <div>
-                        <button id="nav-button" class="btn md:px-8 md:py-3 bg-[#B4F461]">Blog</button>
+                        <button id="nav-button" class="btn md:px-8 text-[15px] md:text-xl bg-[#B4F461]">Blog</button>
                     </div>
                 </div>
                 <div class="navbar-center text-xs">
                     <div class="flex items-center md:gap-5 justify-between cursor-pointer">
                         <img class="" src="./assets/logo.png" alt="">
-                        <a class="md:text-xl text-xs md:flex hidden">Donate Bangladesh</a>
+                        <a class="md:text-xl font-semibold md:flex hidden">Donate Bangladesh</a>
                     </div>
                 </div>
                 <div class="navbar-end">
@@ -111,7 +111,7 @@
                     <div class="flex flex-col justify-between">
                         <div
                             class="inline-flex md:gap-4 gap-2 px-4 py-3 bg-[rgba(17,17,17,0.05)] rounded-md md:w-1/4 w-3/4 items-center">
-                            <img class="w-full" src="./assets/coin.png" alt="">
+                            <img class="" src="./assets/coin.png" alt="">
                             <div id="feni-text" class="md:text-xl text-[16px] text-[rgba(17,17,17,0.7)]">600
                             </div>
                             <span class="md:text-xl text-[16px] text-[rgba(17,17,17,0.71)]">BDT</span>
@@ -196,7 +196,8 @@
             <!-- their i will append history section -->
         </div>
     </main>
-    <footer>
+    <footer class="md:p-24 bg-[#F9F7F3] p-12 md:mt-12 mt-5">
+
     </footer>
     <script src="./js/utilites.js"></script>
     <script src="./js/index.js"></script>
